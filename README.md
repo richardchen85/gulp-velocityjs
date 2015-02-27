@@ -1,5 +1,5 @@
 # gulp-velocityjs
-Gulp version of node module velocity
+Gulp version of node module velocity, each .vm file has a same file name with .json extension for it's data support. Data file will be ignored which does not exists. If a .vm has a `#parse` command, data file of included .vm file will be merged in render context.
 
 # useage
 
