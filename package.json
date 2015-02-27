@@ -25,5 +25,10 @@
   "dependencies": {
     "event-stream": "^3.2.2",
     "velocity": "^0.7.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-rename": "^1.2.0",
+    "gulp-velocityjs": "^1.0.0"
   }
 }

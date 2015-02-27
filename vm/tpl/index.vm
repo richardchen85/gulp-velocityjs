@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>index</title>
+</head>
+<body>
+    #parse('/top.vm')
+    <p>version: ${version}</p>
+    <p>dependencies: ${dependencies}</p>
+</body>
+</html>

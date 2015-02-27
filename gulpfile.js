@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     rename = require('gulp-rename'),
-    vm = require('gulp-velocityjs');
+    vm = require('./index.js');
 
 var config = {
     // tpl root 
