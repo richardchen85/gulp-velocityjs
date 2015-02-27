@@ -1,0 +1,29 @@
+{
+  "name": "gulp-velocityjs",
+  "version": "1.0.0",
+  "description": "Gulp version of node module velocity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richard-chen-1985/gulp-velocityjs.git"
+  },
+  "keywords": [
+    "gulp-velocityjs",
+    "gulp",
+    "gulpplugin",
+    "gulp-plugin"
+  ],
+  "author": "richardChen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richard-chen-1985/gulp-velocityjs/issues"
+  },
+  "homepage": "https://github.com/richard-chen-1985/gulp-velocityjs",
+  "dependencies": {
+    "event-stream": "^3.2.2",
+    "velocity": "^0.7.1"
+  }
+}

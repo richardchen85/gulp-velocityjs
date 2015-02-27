@@ -1,0 +1,12 @@
+{
+  "name": "gulp-velocityjs-test",
+  "version": "1.0.0",
+  "description": "Gulp version of node module velocity test project",
+  "author": "richardChen",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-rename": "^1.2.0",
+    "gulp-velocityjs": "^1.0.0"
+  }
+}
