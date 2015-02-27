@@ -14,7 +14,7 @@ function getContext(opt) {
     
     dataFiles.forEach(function(data) {
         if(fs.existsSync(data)) {
-            var json = require(data);
+            var json = JSON.parse(fs.readFileSync(data));
             for(cnxt in json) {
                 context[cnxt] = json[cnxt];
             }
