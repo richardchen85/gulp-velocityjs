@@ -1,6 +1,6 @@
 {
   "name": "gulp-velocityjs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Gulp version of node module velocity",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "gulp": "^3.8.10",
-    "gulp-rename": "^1.2.0",
-    "gulp-velocityjs": "^1.0.0"
+    "gulp-rename": "^1.2.0"
   }
 }
