@@ -55,11 +55,11 @@ function getDataFilePath(vFile, opt) {
         tplFileName = path.basename(filePath,'.vm'),
         tplRootAbsPath = path.resolve(tplRoot),
         tplRelativePath = tplDirName.replace(tplRootAbsPath,''),
-        datafilePath = opt.dataPath +  tplRelativePath + path.sep + tplFileName + '.json',
+        datafilePath = opt.dataPath +  tplRelativePath + tplFileName + '.json',
         datafileAbsPath = path.resolve(datafilePath);
 
     if(!fs.existsSync(datafileAbsPath)) {
-        console.log('Ignored data file ' + datafileAbsPath);
+        console.log('Ignored data file ' + datafilePath);
     }
       
     return datafileAbsPath;
