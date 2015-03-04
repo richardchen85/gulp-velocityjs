@@ -35,7 +35,7 @@ function getParseFiles(content, filePath, opt) {
         ast.body.forEach(function(p) {
             if(p.type === 'Parse') {
                 var tmp = p.argument.value;
-                if(tmp.indexOf('/') == 0) {
+                if(tmp.indexOf('/') === 0) {
                     tmp = tplRoot + tmp.replace(/\//g, path.sep);
                 } else {
                     tmp = dirname + tmp.replace(/.\/|\//g, path.sep);
@@ -58,9 +58,9 @@ function getDataFilePath(vFile, opt) {
         datafilePath = opt.dataPath +  tplRelativePath + tplFileName + '.json',
         datafileAbsPath = path.resolve(datafilePath);
 
-    if(!fs.existsSync(datafileAbsPath)) {
-        console.log('Ignored data file ' + datafilePath);
-    }
+    fs.exists(datafileAbsPath, function(exists) {
+        exists || console.log('Ignored data file ' + datafilePath); 
+    });
       
     return datafileAbsPath;
 }
