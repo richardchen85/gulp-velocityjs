@@ -52,14 +52,14 @@ function getDataFilePath(vFile, opt) {
     var filePath = vFile,
         tplRoot = util.isArray(opt.root) ? opt.root[0] : opt.root, 
         tplDirName = path.dirname(filePath),
-        tplFileName = path.basename(filePath,'.vm'),
+        tplFileName = path.basename(filePath, '.vm'),
         tplRootAbsPath = path.resolve(tplRoot),
-        tplRelativePath = tplDirName.replace(tplRootAbsPath,''),
-        datafilePath = opt.dataPath +  tplRelativePath + tplFileName + '.json',
+        tplRelativePath = tplDirName.replace(tplRootAbsPath, ''),
+        datafilePath = path.normalize(opt.dataPath + tplRelativePath + path.sep + tplFileName + '.json'),
         datafileAbsPath = path.resolve(datafilePath);
 
     fs.exists(datafileAbsPath, function(exists) {
-        exists || console.log('Ignored data file ' + datafilePath); 
+        exists || console.log('Ignored data file ' + datafilePath);
     });
       
     return datafileAbsPath;
