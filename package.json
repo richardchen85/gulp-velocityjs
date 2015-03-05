@@ -1,6 +1,6 @@
 {
   "name": "gulp-velocityjs",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Gulp version of node module velocity",
   "main": "index.js",
   "scripts": {
@@ -11,10 +11,9 @@
     "url": "https://github.com/richard-chen-1985/gulp-velocityjs.git"
   },
   "keywords": [
-    "gulp-velocityjs",
     "gulp",
-    "gulpplugin",
-    "gulp-plugin"
+    "velocity",
+    "gulpplugin"
   ],
   "author": "richardChen",
   "license": "MIT",
