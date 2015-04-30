@@ -1,5 +1,5 @@
 var es = require('event-stream'),
-    vEngine = require('velocity').Engine,
+    Engine = require('velocity').Engine,
     Parser = require('velocity').parser,
     Buffer = require('buffer').Buffer,
     path = require('path'),
@@ -15,7 +15,7 @@ function getContext(opt) {
     dataFiles.forEach(function(data) {
         if(fs.existsSync(data)) {
             var json = JSON.parse(fs.readFileSync(data));
-            for(cnxt in json) {
+            for(var cnxt in json) {
                 context[cnxt] = json[cnxt];
             }
         }
@@ -93,7 +93,7 @@ module.exports = function(opt) {
             return this.emit('data', file); // pass along
         }
         if (file.isStream()) {
-            return this.emit('error', new Error(PLUGIN_NAME + ": Streaming not supported"));
+            return this.emit('error', new Error('gulp-velocityjs: Streaming not supported'));
         }
 
         if (file.isBuffer()) {
@@ -102,13 +102,13 @@ module.exports = function(opt) {
             try {
                 var context = getContext(opt);
             } catch (err) {
-                return this.emit('error', err)
+                return this.emit('error', err);
             }
 
             try {
-                var renderResult = new vEngine(opt).render(context);
+                var renderResult = new Engine(opt).render(context);
             } catch (err) {
-                return this.emit('error', err)
+                return this.emit('error', err);
             }
             file.contents = new Buffer(renderResult);
             this.emit('data', file);
@@ -116,4 +116,4 @@ module.exports = function(opt) {
     }
 
     return es.through(renderTpl);
-}
+};
